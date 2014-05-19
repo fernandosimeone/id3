@@ -45,6 +45,8 @@
 		}
 	}
 
+	// Busca atributo com maior ganho.
+	// Ganho do atributo = entropia total - entropia do atributo.
 	ID3.prototype.getAtributoMelhorClassificador = function(nodo) {
 		
 		var entropiaTotal = this.calcularEntropia(nodo.dados);
@@ -87,7 +89,6 @@
 
 	ID3.prototype.calcularEntropiaAtributo = function(dados, atributo) {
 
-		// console.log(">>> Calculando entropia Entropia " +  atributo.nome);
 		var registrosPorValor = dados.getRegistrosPorValorAtributo(atributo);
 		var soma = 0;
 		var total = dados.registros.length;
@@ -97,11 +98,7 @@
 			var entropiaValor = this.calcularEntropia(dados, registrosPorValor[valor]);
 			var proporcao = registrosPorValor[valor].length / total;
 			soma += entropiaValor * proporcao;
-			// console.log("------  Entropia valor " +  valor + " = " + entropiaValor + " || num registros = " + registrosPorValor[valor].length + " || total = " + total + " || proporcao = " + proporcao);
 		}
-
-		// console.log("==== Entropia " +  atributo.nome + " = " + soma);
-		// console.log("   ");
 
 		return soma;
 	};
