@@ -21,13 +21,13 @@ h1, h2 {
 h1 {
 	font-size: 40px;
 	color: #016796;
-	text-shadow: black 0px -1px;
+	text-shadow: white 0px 2px;
 }
 
 h2 {
 	font-size: 28px;
 	color: #444;
-	text-shadow: white -1px 1px;
+	text-shadow: white 0px 2px;
 }
 
 #content {
@@ -57,7 +57,7 @@ label {
 	display: block;
 	font-size: 28px;
 	color: #016796;
-	text-shadow: black 0px -1px;
+	text-shadow: white 0px 2px;
 }
 
 textarea#inputDados {
@@ -96,6 +96,10 @@ button#processar:active {
 	box-shadow: 0px 4px 2px #333 inset;
 	text-shadow: black 0px -1px;
 	background-color: #016796;
+}
+
+button:focus {
+	outline:0;
 }
 
 p {
