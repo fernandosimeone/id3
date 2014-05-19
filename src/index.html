@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Árvore de decisão com algorítmo ID3</title>
+</head>
+<body>
+
+	<div id="content">
+
+		<h1>Geração de árvore de decisão com o algoritmo ID3</h1>
+		<h2>Fernando Simeone, Isaías Alves Ferreira</h2>
+		
+		
+		<section id="dados">
+
+			<label for="inputDados">Insira os dados abaixo:</label>
+			<p> 
+				Os dados devem ser inseridos no seguinte formato: cada registro em 
+				uma linha, e as colunas separadas por vírgula. A primeira linha deve conter
+				os nomes das colunas. A última coluna será considerada a atributo alvo 
+				da classificação (classe).
+			</p>
+
+			<textarea id="inputDados"></textarea>
+
+			<p>
+				Dados de exemplo: <a id="tempo" class="dado-exemplo">Tempo</a>.
+			</p>
+
+		</section>
+
+		<button id="processar">Processar</button>
+
+		<section id="arvore">
+			<label for="viewport">Árvore gerada:</label>
+			<canvas id="viewport" width="800" height="600"></canvas>
+		</section>
+
+		<section id="informacoes">
+			<label>Informações:</label>
+			<p> 
+				Trabalho desenvolvido pelos alunos <strong>Fernando Simeone</strong> e <strong>Isaías Alves Ferreira</strong>.
+				
+			</p>
+
+			<p><strong>Curso:</strong> Mestrado em Ciência da Computação - DCC - UFLA</p>
+			<p><strong>Disciplina:</strong> Mineração de Dados</p>
+			<p><strong>Professor:</strong> Ahmed A. A. Esmin</p>
+			<p> 
+				<a href="https://github.com/fernandosimeone/id3" target="_blank">
+					Código fonte no Github</a> 
+			</p>
+			<p>
+				<strong>Tecnologias:</strong>
+				
+				<a href="http://jquery.com/" target="_blank">jQuery</a>,
+				<a href="http://arborjs.org/" target="_blank">arbor.js</a> 
+			</p>
+		</section>
+	</div>
+
+	<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/arbor.js"></script>
+	<script type="text/javascript" src="js/lib/arbor-tween.js"></script>
+	<script type="text/javascript" src="js/lib/graphics.js"></script>
+	<script type="text/javascript" src="js/lib/renderer.js"></script>
+
+	<script type="text/javascript" src="js/id3/dados.js"></script>
+	<script type="text/javascript" src="js/id3/id3.js"></script>
+	<script type="text/javascript" src="js/id3/grafo.js"></script>
+	<script type="text/javascript" src="js/id3/dadosExemplo.js"></script>
+
+	<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
