@@ -5,11 +5,12 @@
 		this.sys = arbor.ParticleSystem(1000, 400,0);
 		this.sys.parameters({gravity:true});
 		this.sys.renderer = Renderer(selector) ;
-		this.nodoCount = 0;
 	};
 
 	Grafo.prototype.renderizar = function(arvore) {
 
+		this.nodoCount = 0;
+		this.sys.prune();
 		this._adicionarNodo(arvore.raiz);
 	};
 
